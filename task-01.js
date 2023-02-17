@@ -19,7 +19,7 @@ function move(position, roll) {
 //https://www.codewars.com/kata/grasshopper-personalized-message/train/javascript
 
 function greet(name, owner) {
-  return "Hello " + (name === owner ? "boss" : "guest");
+  return 'Hello ' + (name === owner ? 'boss' : 'guest');
 }
 
 //https://www.codewars.com/kata/keep-hydrated-1/train/javascript
