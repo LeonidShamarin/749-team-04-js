@@ -59,4 +59,16 @@ stringToArray = function (str) {
     }
   }
 
+  https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
+
+  function warnTheSheep(queue) {
+    let indexOfWolf = queue.indexOf("wolf");
+    for(let i=(queue.length-1); i>=0; i--){
+      if (i === (indexOfWolf+1)) {
+        return "Oi! Sheep number " + (queue.length-i) + "! You are about to be eaten by a wolf!";
+      } else if(i === indexOfWolf){
+        return "Pls go away and stop eating my sheep";
+      }
+    }
+  }
   
