@@ -35,6 +35,14 @@ function min(arr, toReturn) {
   return toReturn === 'value' ? min : pos;
 }
 
+----
+const min = (arr, toReturn, minArr = Math.min(...arr)) => 
+ toReturn =='value'? minArr : arr.indexOf(minArr)
+
+
+
+
+
 //https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
 
   function warnTheSheep(queue) {
@@ -48,3 +56,5 @@ function min(arr, toReturn) {
     }
   }
   
+
+
