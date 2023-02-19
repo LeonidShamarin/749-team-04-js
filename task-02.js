@@ -68,6 +68,18 @@ function warnTheSheep(queue) {
     "! You are about to be eaten by a wolf!"
   );
 }
+//https://www.codewars.com/kata/beginner-lost-without-a-map
+//6
+function doubleValues(array) {
+    var newArray = [];
+    array.forEach(function (el) { newArray.push(el * 2); });
+    return newArray;
+}
+
+console.log(doubleValues([1, 2, 3]));
+
+
+
 
 //https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
 function firstNonConsecutive(arr) {
