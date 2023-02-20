@@ -26,7 +26,7 @@ var max = function (list) {
 function min(arr, toReturn) {
   let min = arr[0];
   let pos = 0;
-  for (i = 1; i < arr.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
     if (arr[i] < min) {
       min = arr[i];
       pos = i;
@@ -53,7 +53,7 @@ function warnTheSheep(queue) {
 //https://www.codewars.com/kata/beginner-lost-without-a-map
 //6
 function doubleValues(array) {
-    var newArray = [];
+    const newArray = [];
     array.forEach(el=> newArray.push(el * 2));
     return newArray;
 }
