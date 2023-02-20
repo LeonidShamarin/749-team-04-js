@@ -35,28 +35,10 @@ function min(arr, toReturn) {
   return toReturn === 'value' ? min : pos;
 }
 
-----
-const min = (arr, toReturn, minArr = Math.min(...arr)) => 
- toReturn =='value'? minArr : arr.indexOf(minArr)
-
-
-
 
 
 //https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
 
-  function warnTheSheep(queue) {
-    let indexOfWolf = queue.indexOf("wolf");
-    for(let i=(queue.length-1); i>=0; i--){
-      if (i === (indexOfWolf+1)) {
-        return "Oi! Sheep number " + (queue.length-i) + "! You are about to be eaten by a wolf!";
-      } else if(i === indexOfWolf){
-        return "Pls go away and stop eating my sheep";
-      }
-    }
-  }
-  
-//Інший варіант
 function warnTheSheep(queue) {
   if (queue[queue.length - 1] === "wolf") {
     return "Pls go away and stop eating my sheep";
@@ -68,26 +50,22 @@ function warnTheSheep(queue) {
     "! You are about to be eaten by a wolf!"
   );
 }
+
 //https://www.codewars.com/kata/beginner-lost-without-a-map
 //6
 function doubleValues(array) {
     var newArray = [];
-    array.forEach(function (el) { newArray.push(el * 2); });
+    array.forEach(el=> newArray.push(el * 2));
     return newArray;
 }
 
 console.log(doubleValues([1, 2, 3]));
 
 
-
-
 //https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
 function firstNonConsecutive(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] - arr[i - 1] > 1) {
-      return arr[i];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i - 1] + 1 !== arr[i]) return arr[i];
     }
-  }
-
-  return null;
+    return null;
 }
