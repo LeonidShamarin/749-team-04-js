@@ -28,19 +28,18 @@ const giveMeFive = object => {
 
 //https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
 function buildFun(n) {
-  var res = [];
-  
-  for (var i = 0; i < n; i++) {
-    res.push((function(num) {
-      return function() {
-        console.log(num);
-      };
-    })(i));
-  }
-  
-  return res;
+  var functionArray = [];
+  for(var i=0; i< n; i++){
+     functionArray.push(
+       (function(i){
+           return function (){
+              return i
+            }
+         })(i)
+    );
+ } 
+ return functionArray; 
 }
-
 
 
 
