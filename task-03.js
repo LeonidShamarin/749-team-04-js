@@ -26,6 +26,28 @@ const giveMeFive = object => {
   return result
 }
 
+//https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
+function buildFun(n) {
+  var res = [];
+  
+  for (var i = 0; i < n; i++) {
+    res.push((function(num) {
+      return function() {
+        console.log(num);
+      };
+    })(i));
+  }
+  
+  return res;
+}
+
+
+
+
+
+
+
+
 //https://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance/train/javascript
 
 
